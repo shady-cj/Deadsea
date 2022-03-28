@@ -117,6 +117,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    img {
+        margin-bottom: 8px;
+    }
 
     svg {
         font-size: 22px;
@@ -152,7 +155,7 @@
         position: absolute;
         transition: border-color 1s ease-in-out;
         top: 0;
-        left: 500px;
+        left: 490px;
         background-color: red;
         z-index: 10;
         transform: rotate(10deg);
@@ -212,7 +215,7 @@
         top: -17.46px;
         z-index: 9;
         transform: rotate(10deg);
-        left: 690.08px;
+        left: 650.08px;
         padding: 0 24px;
         border: 2px solid var(--color-white);
 
@@ -313,6 +316,12 @@
         line-height: 17px;
         letter-spacing: 0.75px;
         color: var(--color-white-2);
+        &:hover {
+            background: #0007d2;
+        }
+        &:active {
+            background: #0000aa;
+        }
         svg {
             margin-left: 10px;
         }
@@ -334,9 +343,50 @@
         letter-spacing: 0.75px;
         text-decoration: none;
         color: #1325f0;
+        cursor: pointer;
         svg {
             transform: translate(8px, 2px);
             color: #1325f0;
+        }
+
+        &:active,
+        &:hover {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            height: 40px;
+            border-radius: 72px;
+            color: var(--color-white-2);
+            svg {
+                color: var(--color-white-2);
+            }
+
+            @media screen and (max-width: 900px) {
+                width: 150px;
+                height: 30px;
+                svg {
+                    transform: translate(6px, -1px);
+
+                    color: var(--color-white-2);
+                }
+            }
+            @media screen and (max-width: 600px) {
+                width: 130px;
+                height: 25px;
+                font-size: 12px;
+                svg {
+                    transform: translate(6px, 0px);
+
+                    color: var(--color-white-2);
+                }
+            }
+        }
+        &:hover {
+            background-color: #1325f0;
+        }
+        &:active {
+            background-color: #0007d2;
         }
     }
     @media screen and (max-width: 120px) {

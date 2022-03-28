@@ -5,22 +5,25 @@ import { BsArrowUpRight, BsArrowRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import HapeBeast from "../../assets/hapebeast.jpg";
 import Chainmask from "../../assets/chainmask.jpeg";
+import profile from "../../assets/profile.jpg";
+import share from "../../assets/share.svg";
 const animateCard1 = {
     whileInView: {
         rotate: [10, 10, 0, -15],
-        y: [0, -10, 201, 87],
-        x: [0, 0, 0, 82],
+        y: [0, -10, 201, 85],
+        x: [0, 0, 0, 80],
         transition: {
             duration: 3,
             ease: "easeInOut",
         },
     },
 };
+
 const animateCard2 = {
     whileInView: {
         rotate: [10, 25, 0, 15],
         y: [0, -10, -50, 52],
-        x: [0, 0, 0, -60],
+        x: [0, 0, 0, -35],
         transition: {
             duration: 3,
             ease: "easeInOut",
@@ -58,14 +61,14 @@ const Hero = () => {
                     </div>
                     <div className="hero__card-1-user-info">
                         <div className="hero__card-1-user-img">
-                            <img src={HapeBeast} alt="" />
+                            <img src={profile} alt="" />
                         </div>
                         <div className="hero__card-1-user-likes">
                             <BsHeart />
                             <span>127.2k</span>
                         </div>
                         <div className="hero__card-1-user-shares">
-                            <BsHeart />
+                            <img src={share} alt="share" />
                             <span>50k</span>
                         </div>
                     </div>
@@ -97,14 +100,14 @@ const Hero = () => {
                     </div>
                     <div className="hero__card-2-user-info">
                         <div className="hero__card-2-user-img">
-                            <img src={HapeBeast} alt="" />
+                            <img src={profile} alt="" />
                         </div>
                         <div className="hero__card-2-user-likes">
                             <BsHeart />
                             <span>200k</span>
                         </div>
                         <div className="hero__card-2-user-shares">
-                            <BsHeart />
+                            <img src={share} alt="share" />
                             <span>3k</span>
                         </div>
                     </div>
@@ -126,7 +129,7 @@ const Hero = () => {
                     <button className="hero__navigation-button">
                         Discover Artwork <BsArrowRight />
                     </button>
-                    <a href="#" className="hero__navigation-link">
+                    <a className="hero__navigation-link">
                         Sell Artwork <BsArrowUpRight />
                     </a>
                 </div>

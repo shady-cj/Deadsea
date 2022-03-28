@@ -81,6 +81,12 @@
         line-height: 17px;
         letter-spacing: 0.75px;
 
+        &:hover {
+            background-color: #0007d2;
+        }
+        &:active {
+            background-color: #0000aa;
+        }
         cursor: pointer;
         @media screen and (max-width: 600px) {
             padding: 6px 12px;
